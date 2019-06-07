@@ -22,7 +22,9 @@ Route::get('/submit', function () {
 
 use Illuminate\Http\Request;
 
-//①POSTで/submitにアクセスする。
+Route::post('/submit', 'LinkController@submit');
+
+/*①POSTで/submitにアクセスする。
 Route::post('/submit', function(Request $request){
   //②validateメソッドを使ってバリデーションを行う
   $data = $request->validate([
@@ -38,3 +40,4 @@ Route::post('/submit', function(Request $request){
   //リダイレクトする
   return redirect('/');
 });
+*/
